@@ -1,0 +1,857 @@
+/* importing google font */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+/* General design */
+body {
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: dimgrey;
+    margin: 0;
+    padding: 0;
+}
+
+#page {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Text */
+
+h1 {
+    margin: 0 0 1em 0;
+    font-size: 2.8em;
+    font-weight: 700;
+}
+
+h2 {
+    margin: 0 0 .5em 0;
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+
+h3 {
+    margin: 0 0 .5em 0;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+h4 {
+    margin: 0 0 1.5em 0;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+p {
+    margin: 0 0 1em 0;
+}
+
+a {
+    color: blue;
+}
+
+a:visited {
+    color: darkblue;
+}
+
+a.button {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 4px 15px;
+    transition: background-color .5s;
+}
+
+a.button:hover {
+    background-color: rgba(0,0,0,.3);
+}
+
+/* header */
+
+header {
+    height: 430px;
+    background: url(../images/banner_big.jpg) no-repeat center bottom;
+    position: relative;
+}
+
+header a.logo {
+    z-index: 1;
+    position: absolute;
+    display: block;
+    width: 160px;
+    height: 66px;
+    background: url(../images/logotipo.jpg) no-repeat 0 0;
+    background-size: contain;
+    top: 15px;
+    left: 20px;
+}
+
+header a.logo span {
+    display: none;
+}
+
+header div.header {
+    position: absolute;
+    width: 42%;
+    top: 130px;
+    left: 55%;
+}
+
+header div.header h1 {
+    line-height: 1em;
+    margin: 0 0 30px 0;
+    color: orangered;
+}
+
+/* navigation */
+
+nav {
+    background-color: rgba(0,0,0,.65);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 50px 0 0 0;
+    width: 100%;
+}
+
+nav::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+nav ul li:hover {
+    background-color: orangered;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 125px;
+    position: relative;
+}
+
+nav ul li a:visited {
+    color: white;
+}
+
+nav ul li a:hover {
+    background-color: darkorange;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 100%;
+    background-color: orangered;
+    display: none;
+}
+
+nav ul ul li {
+    position: relative;
+}
+
+nav ul ul ul {
+    left: 100%;
+    top: 0px;
+}
+
+nav > ul {
+    padding-left: 200px;
+}
+
+nav > ul > li {
+    float: left;
+}
+
+nav > ul > li > a {
+    width: auto;
+    padding: 10px 20px 15px 20px;
+}
+
+nav a[aria-haspopup="true"]::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid white;
+}
+
+nav > ul > li > a[aria-haspopup="true"]::after {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid white;
+    left: 20px;
+    right: auto;
+    bottom: 6px;
+    top: auto;
+}
+
+/* section - all */
+
+section {
+    padding: 0 30px;
+}
+
+section::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* section - tips */
+
+section.tips {
+    background-color: whitesmoke;
+    position: relative;
+}
+
+section.tips aside {
+    width: 31%;
+    float: left;
+    margin-right: 25px;
+}
+
+section.tips aside .content {
+    padding: 30px 30px 20px 0;
+}
+
+section.tips aside .content img {
+    display: block;
+    margin-bottom: 15px;
+    width: 70%;
+    
+}
+
+section.tips aside .content h4 {
+    margin-bottom: 0;
+}
+
+section.tips aside .content p {
+    margin-bottom: .5em;
+}
+
+section.tips aside .content a {
+    display: inline-block;
+    color: orangered;
+    font-weight: 700;
+}
+
+/* section - safety */
+
+section.safety {
+    background-color: darkorange;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+section.safety article {
+    padding: 0 20px 0 515px;
+    background: url(../images/stopping.jpg) no-repeat 0 5px;
+    min-height: 220px;
+}
+
+/* section - maps */
+section.maps {
+    background-color: cornflowerblue;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+section.maps article {
+    padding: 0 20px 0 515px;
+    background: url(../images/location.jpg) no-repeat 0 5px;
+    min-height: 220px;
+}
+
+
+/* section - trend */
+
+section.trend {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+section.trend aside {
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+
+section.trend .content {
+    margin: 15px;
+    background: no-repeat center top;
+    background-size: 75px 75px;
+    padding-top: 85px;
+}
+
+section.trend aside h3 a {
+    color: black;
+    text-decoration: none;
+}
+
+section.trend aside h3 a:hover {
+    text-decoration: underline;
+}
+
+section.trend aside .content.trending {
+    background-image: url(../images/star.svg);
+}
+
+section.trend aside .content.find-us {
+    background-image: url(../images/marker.svg);
+}
+
+section.trend aside .content.nct {
+    background-image: url(../images/gear.svg);
+}
+
+/* section - login */
+
+section.login {
+    background-color: navajowhite;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: black;
+}
+
+section.login p {
+    
+    color: red;
+    
+}
+
+section.login article {
+    padding: 0 20px 0 515px;
+    background: url(../images/login_icon.png) no-repeat 0 5px;
+    min-height: 220px;
+}
+
+
+/* Input */
+
+form input[type="text"] {
+    border:1px solid black;
+    padding:5px;
+}
+
+form input[type="text"]:hover {
+    background-color:lightgrey;
+    border:1px solid black;
+    padding:5px;
+}
+
+form input[type="text"]:focus {
+    background-color:whitesmoke;
+    border:1px solid black;
+    padding:7px;
+}
+
+form input[type="password"] {
+    border:1px solid black;
+    padding:5px;
+}
+
+form input[type="password"]:hover {
+    background-color:lightgrey;
+    border:1px solid black;
+    padding:5px;
+}
+
+form input[type="password"]:focus {
+    background-color:whitesmoke;
+    border:1px solid black;
+    padding:7px;
+}
+
+.btn {
+    padding:5px;
+    background-color:darkblue;
+    border:1px solid black;
+    color:floralwhite;
+    font-weight:bold;
+}
+
+.btn:hover {
+    padding:5px;
+    background-color:black;
+    border:1px solid darkblue;
+    color:floralwhite;
+    font-weight:bold;
+	}
+
+/* Textarea */
+
+form textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:black;
+    border:1px solid black;
+    padding:5px;
+}
+
+/* Date */
+
+form input[type="date"] {
+    border:1px solid black;
+    padding:5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Select */
+
+form select[type="text"] {
+    border:1px solid black;
+    padding:5px;
+}
+
+.btn {
+    padding:5px;
+    background-color:darkblue;
+    border:1px solid black;
+    color:floralwhite;
+    font-weight:bold;
+}
+
+.btn:hover {
+    padding:5px;
+    background-color:black;
+    border:1px solid darkblue;
+    color:floralwhite;
+    font-weight:bold;
+	}
+
+
+
+/* footer */
+
+footer {
+    font-size: .8em;
+    margin: 40px;
+    color: black;
+}
+
+footer .content {
+    display: inline;
+}
+
+footer a {
+    margin-left: 30px;
+    color: black;
+}
+
+footer a:visited {
+    color: blue;
+}
+
+footer a:hover {
+    color: darkgrey;
+}
+
+
+/* media queries for 5 different size  */
+
+@media screen and (max-width: 1000px) {
+    
+    h1 {
+        font-size: 2.4em;
+    }
+    
+    /* header */
+    
+    header div.header {
+        left: 56%;
+    }
+    
+    header div.header h1 {
+        margin-bottom: 20px;
+    }
+    
+    /* section - safety */
+    
+    section.safety article {
+        padding-left: 400px;
+        background-size: 375px auto;
+    }
+    
+    /* section - maps */
+    
+    section.maps article {
+        padding-left: 400px;
+        background-size: 375px auto;
+    }
+        /* section - login */
+    
+    section.login article {
+        padding-left: 400px;
+        background-size: 375px auto;
+    }
+      
+}
+
+@media screen and (max-width: 825px) {
+    
+    h1 {
+        font-size: 2.2em;
+    }
+    
+    /* header */
+    
+    header {
+        height: 300px;
+        background-image: url(../images/banner_medium.jpg);
+    }
+    header div.header {
+        top: 120px;
+        left: 48%;
+    }
+    
+/* section - safety */
+    
+    section.safety article {
+        padding-left: 325px;
+        background-size: 300px auto;
+    }
+    
+/* section - maps */
+    
+    section.maps article {
+        padding-left: 325px;
+        background-size: 300px auto;
+    }
+    
+        /* section - login */
+    
+    section.login article {
+        padding-left: 325px;
+        background-size: 300px auto;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.4em;
+    }
+    
+    h3 {
+        font-size: 1.1em;
+    }
+    
+    a.button {
+        font-size: 1em;
+    }
+    
+    /* header */
+    
+    header a.logo {
+        width: 145px;
+        height: 60px;
+    }
+    
+    header div.header {
+        top: 140px;
+        left: 48%;
+    }
+    
+    
+    /* section - trend */
+    
+    section.trend {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    section.trend aside div.content {
+        background-size: 55px 55px; 
+        padding-top: 60px;
+    }
+    
+    /* section - tips */
+    section.tips aside div.content img {
+        width: 85%;
+    }
+    
+    /* navigation */
+    nav {
+        padding-top: 80px;
+    }
+    
+    nav > ul {
+        padding-left: 10px;
+    }    
+}
+
+@media screen and (max-width: 625px) {
+    
+    h1 {
+        font-size: 1em;
+    }
+    
+    h3 {
+        margin-bottom: 0px;
+    }
+    
+    a.button {
+        font-size: .9em;
+    }
+    
+    /* header */
+    header {
+        height: 160px;
+        background-image: url(../images/banner_small.jpg);
+        background-position: left top;
+    }
+    
+    header a.logo {
+        width: 100%;
+        height: 66px;
+        left: 0px;
+        top: 0px;
+        background-color: rgba(0,0,0,.65);
+        background-size: 112px 46px;
+        background-position: 20px center;
+    }
+    
+    header div.header {
+        width: 300px;
+        top: 85px;
+        left: 130px;
+    }
+    
+    header div.header h1{
+        margin-bottom: 10px;
+    }
+    
+    /* section - trend */
+    section.trend aside {
+        width: 100%;
+        float: none;
+        text-align: left;
+    }
+    
+    section.trend aside div.content {
+        margin: 8px 20px 8px 0;
+        padding: 5px 0px 10px 85px;
+        background-size: 50px 50px;
+        background-position: 20px 5px;
+    }
+    
+    /* section - safety */
+    
+    section.safety article {
+        padding: 160px 20px 0px 0px;
+        background-size: 300px auto;
+        min-height: initial;
+    }
+    
+/* section - maps */
+    
+    section.maps article {
+        padding: 160px 20px 0px 0px;
+        background-size: 300px auto;
+        min-height: initial;
+    }
+    
+    /* section - tips */
+    section.tips aside {
+        width: 100%;
+        float: none;
+        margin: 0;
+        position: relative;
+    }
+    
+    section.tips aside div.content {
+        padding: 20px 20px 20px 150px;
+    }
+    
+    section.tips aside p {
+        font-size: .9em;
+    }
+    
+    section.tips aside div.content img {
+        display: inline-block;
+        width: 125px;
+        position: absolute;
+        top: 30px;
+        left: 0px;
+    }
+
+    /* section - login */
+    
+    section.login article {
+        padding: 160px 20px 0px 0px;
+        background-size: 300px auto;
+        min-height: initial;
+        
+    }
+
+    
+ /* navigation */
+    
+    nav {
+        position: static;
+        width: auto;
+        padding: 20px 15px;
+        background-color: orangered;
+    }
+    
+    nav ul, nav ul ul, nav ul ul ul {
+        display: block;
+        position: static;
+    }
+    
+    nav > ul {
+        padding: 0;
+    }
+    
+    nav > ul > li {
+        float: none;
+        margin-top: 25px;
+    }
+    
+    nav ul li:hover {
+        background: none;
+    }
+    
+    nav ul li a {
+        width: auto;
+        display: block;
+        margin: 8px 10px;
+        padding: 8px 15px;
+        border: 1px solid rgba(255,255,255,.25);
+        
+    }
+    
+    nav ul li a:hover {
+        background-color: rgba(255,255,255,.2);
+    }
+    
+    nav ul ul {
+        background: none;
+    }
+    
+    nav ul ul li a {
+        margin-left: 30px;
+    }
+    
+    nav ul ul ul li a {
+        margin-left: 60px;
+    }
+    
+    nav a[aria-haspopup="true"]::after {
+        display: none;
+    }
+    
+    /* footer */
+    footer div.content {
+        display: block;
+        margin-top: 15px;
+    }
+    
+    footer div.content a {
+        margin: 0 20px 0 0;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    
+    /* header */
+    header {
+        height: 110px;
+        background-image: url(../images/banner_xsmall.jpg);
+    }
+    
+    header a.logo {
+        height: 36px;
+        background: rgba(0,0,0,.65) url(../images/logo_small.jpg) no-repeat center center; 
+        background-size: 126px 17px;
+    }
+    
+    header div.header {
+        width: 100%;
+        left: 0px;
+        top: 46px;
+        text-align: center;
+    }
+    
+    header div.header h1 {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+    
+    header div.header a.button {
+        padding: 2px 30px;
+        font-size: .8em;
+    }
+    
+    header div.header a.button span {
+        display: none;
+    }
+    
+    
+    /* section - tips */
+    
+    section.tips aside div.content {
+        padding: 140px 20px 20px 0px;
+    }
+    
+    section.tips aside div.content img {
+        width: auto;
+        height: 100px;
+        top: 30px;
+    }
+    
+/*    section.tips blockquote {
+        margin: 10px 40px 0 20px;
+    }*/
+    
+    /* footer */
+    footer div.content a {
+        display: inline-block;
+        margin: 0 0 10px 0;
+        float: left;
+        clear: both;
+    }
+    
+    footer::after {
+        content:'';
+        display: block;
+        clear: both;
+    }
+   
+}
+
+
+
+
+
